@@ -36,11 +36,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery }) => {
   return (
     <div className="relative w-full md:w-96 mx-auto">
       <div className="relative">
+        <label htmlFor="search">Search for movies...</label>
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for movies..."
+          placeholder="e.g., Goodfellas, Snow White..."
           className="w-full py-3 px-4 pl-10 pr-10 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         />
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
@@ -49,7 +50,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery }) => {
           <button
             onClick={handleClear}
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-            aria-label='Clear search parameters'
+            aria-label="Clear search parameters"
           >
             <X size={18} />
           </button>
