@@ -27,19 +27,20 @@ export const useMovieSearch = (): UseMovieSearchResult => {
     const fetchMovies = async () => {
       setLoading(true);
       setError(null);
-      
+
       try {
         let response: MovieSearchResponse;
-        
+
         if (searchQuery.trim()) {
           response = await searchMovies(searchQuery, currentPage);
         } else {
           response = await getPopularMovies(currentPage);
         }
-        
+
         setMovies(response.results);
         setTotalPages(response.total_pages);
         setTotalResults(response.total_results);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError('Failed to fetch movies. Please try again.');
         setMovies([]);
@@ -47,7 +48,7 @@ export const useMovieSearch = (): UseMovieSearchResult => {
         setLoading(false);
       }
     };
-    
+
     fetchMovies();
   }, [searchQuery, currentPage]);
 

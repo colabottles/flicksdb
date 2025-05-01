@@ -12,15 +12,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center md:justify-start">
             <Film size={28} className="text-blue-500 mr-2" />
-            <h1 className="text-2xl font-bold">FlicksDB</h1>
           </div>
         </div>
       </header>
-      
+
+      <h1 className="text-2xl font-bold">FlicksDB</h1>
+
       <main className="container mx-auto px-4 py-8">
         {children}
       </main>
-      
+
       <footer className="bg-gray-800 py-6">
         <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
           <p>Movie data provided by <a href="https://www.themoviedb.org" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">TMDb</a></p>
