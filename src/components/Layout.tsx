@@ -12,11 +12,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-center md:justify-start">
             <Film size={28} className="text-blue-500 mr-2" />
+            <h1 className="text-2xl font-bold">FlicksDB</h1>
           </div>
         </div>
       </header>
-
-      <h1 className="text-2xl font-bold">FlicksDB</h1>
 
       <main className="container mx-auto px-4 py-8">
         {children}
