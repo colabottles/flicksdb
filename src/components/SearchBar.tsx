@@ -44,11 +44,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, initialQuery }) => {
           className="w-full py-3 px-4 pl-10 pr-10 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         />
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-        
+
         {searchTerm && (
-          <button 
+          <button
             onClick={handleClear}
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+            aria-label='Clear search parameters'
           >
             <X size={18} />
           </button>
